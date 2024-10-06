@@ -5,84 +5,255 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Peak Performance</title>
+  <link href="css/style.css" rel="stylesheet" />
+  <style>
+    /* Algemene opmaak */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <!-- Leaflet CSS for maps -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
+    body {
+      font-family: Arial, sans-serif;
+    }
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.css">
+    /* Algemene stijl voor de navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      /* Zorgt ervoor dat het logo links staat en de links naar rechts gaan */
+      align-items: center;
+      /* Horizontaal centreren van items */
+      position: sticky;
+      top: 0;
+      background-color: #ffffff;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      /* Zorgt ervoor dat de navbar bovenaan blijft */
+    }
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/style.css">
+    /* Logo opmaak */
+    .navbar-brand img {
+      width: 150px;
+      /* Pas de grootte van het logo aan */
+      height: auto;
+    }
+
+    /* Lijst met links in de navbar */
+    .navbar-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Styling voor elk item in de navbar */
+    .navbar-links li {
+      margin-left: 20px;
+      /* Ruimte tussen de links */
+    }
+
+    /* Links zelf */
+    .navbar-links a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-size: 18px;
+      padding: 10px;
+      transition: color 0.3s;
+    }
+
+    /* Hover effect voor de links */
+    .navbar-links a:hover {
+      color: #ff5a5f;
+      /* Kleurverandering bij hover */
+    }
+
+
+    /* Hero sectie met achtergrondafbeelding en tekst */
+    .hero_section {
+      background: url('images/hero-bg.jpg') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero_section h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero_section p {
+      font-size: 20px;
+    }
+
+    /* Kaarten sectie */
+    .cards_section {
+      padding: 50px 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .card {
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card h3 {
+      padding: 15px;
+      background-color: #333;
+      color: #fff;
+      margin: 0;
+    }
+
+    .card a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Tweede achtergrondafbeelding met tekst en knop */
+    .cta_section {
+      background: url('images/hero-bg.jpg') no-repeat center center/cover;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+    }
+
+    .cta_section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .cta_section button {
+      background-color: #ff5a5f;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cta_section button:hover {
+      background-color: #ff3a3f;
+    }
+
+    /* Footer sectie */
+    .footer_section {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero_area">
+  <section class="navbar">
     <!-- Header Section -->
     <header class="header_section">
-      <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+      <nav class="navbar">
         <a class="navbar-brand" href="index.html">
-          <span>Peak Performance</span>
+          <img src="images/logo.png" alt="Peak Performance Logo">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="exercises.html">Exercises</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="food.html">Food Recipes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="times.html">Opening Times</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="event.html">Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="navbar-links">
+          <li><a href="exercises.html">Exercises</a></li>
+          <li><a href="food.html">Food Recipes</a></li>
+          <li><a href="times.html">Opening Times</a></li>
+          <li><a href="event.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </nav>
     </header>
+  </section>
 
-    <!-- Slider Section -->
-    <section class="slider_section position-relative">
-      <article class="carousel-inner">
-        <section class="carousel-item active">
-          <header>
-            <h2>Ewa</h2>
-            <h1>Wesley</h1>
-          </header>
-        </section>
-      </article>
-    </section>
+
+  <!-- Hero Section -->
+  <section class="hero_section">
+    <div>
+      <h1>Welcome to Peak Performance</h1>
+      <p>Achieve Your Fitness Goals With Us</p>
+    </div>
+  </section>
+
+  <!-- Kaarten Sectie -->
+  <section class="cards_section">
+    <article class="card">
+      <img src="images/hero-bg.jpg" alt="Card 1">
+      <h3>Strength Training</h3>
+      <a href="exercises.html">Learn More</a>
+    </article>
+    <article class="card">
+      <img src="images/hero-bg.jpg" alt="Card 2">
+      <h3>Cardio Workouts</h3>
+      <a href="exercises.html">Explore</a>
+    </article>
+    <article class="card">
+      <img src="images/hero-bg.jpg" alt="Card 3">
+      <h3>Nutrition Tips</h3>
+      <a href="food.html">Discover Recipes</a>
+    </article>
+    <article class="card">
+      <img src="images/hero-bg.jpg" alt="Card 4">
+      <h3>Event Updates</h3>
+      <a href="event.html">Stay Updated</a>
+    </article>
+  </section>
+
+  <!-- Call-to-Action Section -->
+  <section class="cta_section">
+    <h2>Join Our Community Today!</h2>
+    <button onclick="window.location.href='contact.html'">Contact Us</button>
   </section>
 
   <!-- Footer Section -->
-  <footer class="footer_section container-fluid">
+  <footer class="footer_section">
     <h2>Socials</h2>
     <nav class="social-icons">
-      <a href="#" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
-      <a href="#" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
-      <a href="#" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
-      <a href="#" target="_blank"><img src="images/youtube.png" alt="YouTube"></a>
+      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
     </nav>
   </footer>
-
-  <!-- Optional Bootstrap and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
