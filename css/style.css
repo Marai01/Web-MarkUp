@@ -1,0 +1,175 @@
+/* Algemene opmaak */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  /* Algemene stijl voor de navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Zorgt ervoor dat het logo links staat en de links naar rechts gaan */
+    align-items: center;
+    /* Horizontaal centreren van items */
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    /* Zorgt ervoor dat de navbar bovenaan blijft */
+  }
+
+  /* Logo opmaak */
+  .navbar-brand img {
+    width: 150px;
+    /* Pas de grootte van het logo aan */
+    height: auto;
+  }
+
+  /* Lijst met links in de navbar */
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Styling voor elk item in de navbar */
+  .navbar-links li {
+    margin-left: 20px;
+    /* Ruimte tussen de links */
+  }
+
+  /* Links zelf */
+  .navbar-links a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s;
+  }
+
+  /* Hover effect voor de links */
+  .navbar-links a:hover {
+    color: #ff5a5f;
+    /* Kleurverandering bij hover */
+  }
+
+
+  /* Hero sectie met achtergrondafbeelding en tekst */
+  .hero_section {
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+
+  .hero_section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .hero_section p {
+    font-size: 20px;
+  }
+
+  /* Kaarten sectie */
+  .cards_section {
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+
+  .card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .card h3 {
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+  }
+
+  .card a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  /* Tweede achtergrondafbeelding met tekst en knop */
+  .cta_section {
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+  }
+
+  .cta_section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .cta_section button {
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .cta_section button:hover {
+    background-color: #ff3a3f;
+  }
+
+  /* Footer sectie */
+  .footer_section {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+  }
+
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+  }
