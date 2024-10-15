@@ -64,9 +64,31 @@
   }
 
 
-  /* Hero sectie met achtergrondafbeelding en tekst */
+  /* Hero section background photos for the home page */
   .hero_section {
-    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    background: url('../images/home1.png') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+
+  /* Hero section background photos for the exercise page */
+  .hero_section_exercises {
+    background: url('../images/bench_background.png') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+
+  /* Hero section background photos for the nutrition page */
+  .hero_section_nutrition {
+    background: url('../images/food_background.png') no-repeat center center/cover;
     height: 80vh;
     display: flex;
     justify-content: center;
@@ -127,7 +149,7 @@
 
   /* Tweede achtergrondafbeelding met tekst en knop */
   .cta_section {
-    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    background: url('../images/home2.png') no-repeat center center/cover;
     height: 50vh;
     display: flex;
     justify-content: center;
