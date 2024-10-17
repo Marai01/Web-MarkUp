@@ -9,59 +9,186 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Algemene stijl voor de navbar */
+
+
+
+
+/* Algemene stijl voor de navbar
 .navbar {
   display: flex;
   justify-content: space-between;
-  /* Zorgt ervoor dat het logo links staat en de links naar rechts gaan */
   align-items: center;
-  /* Horizontaal centreren van items */
   position: sticky;
   top: 0;
   background-color: #ffffff;
   padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   z-index: 1000;
-  /* Zorgt ervoor dat de navbar bovenaan blijft */
-}
+} */
 
-/* Logo opmaak */
+/* Logo opmaak
 .navbar-brand img {
   width: 150px;
-  /* Pas de grootte van het logo aan */
   height: auto;
-}
+} */
 
-/* Lijst met links in de navbar */
+/* Lijst met links in de navbar
 .navbar-links {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-}
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+} */
 
-/* Styling voor elk item in de navbar */
-.navbar-links li {
-  margin-left: 20px;
-  /* Ruimte tussen de links */
-}
-
-/* Links zelf */
-.navbar-links a {
+/* Contact link rechts
+.navbar-contact {
+  margin-left: 800px;
   text-decoration: none;
   color: rgb(0, 0, 0);
   font-size: 18px;
   padding: 10px;
   transition: color 0.3s;
+} */
+
+/* Styling voor elk item in de navbar
+.navbar-links li {
+  margin-left: 20px;
+} */
+
+/* Hover effect voor de links
+.navbar-links a:hover, .navbar-contact:hover {
+  color: #ff5a5f;
+} */
+
+
+li {
+  list-style: none;
 }
 
-/* Hover effect voor de links */
-.navbar-links a:hover {
-  color: #ff5a5f;
-  /* Kleurverandering bij hover */
+a {
+  text-decoration: none;
+  color: #000;
 }
+
+a:hover {
+  color: #ffa500;
+}
+
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .toggle_btn {
+  color: #000000;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn{
+  background-color: #ffa500;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+  scale: 1.05;
+  color: #fff;
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+  height: 240px;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+@media(max-width: 992px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media(max-width: 576px) {
+  .dropdown_menu{
+    left: 2rem;
+    width: unset;
+  }  
+}
+
+
+
+
+
 
 
 /* Hero section background photos for the home page */
@@ -229,7 +356,8 @@ body {
 }
 
 .carousel-item {
-  flex: 0 0 20%; /* Toon 5 items tegelijk */
+  flex: 0 0 20%;
+  /* Toon 5 items tegelijk */
   text-align: center;
   padding: 20px;
 }
@@ -240,7 +368,8 @@ body {
 }
 
 .carousel-btn {
-  background-color: rgba(0, 0, 0, 0.5); /* Zwarte halfdoorzichtige achtergrond */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Zwarte halfdoorzichtige achtergrond */
   color: white;
   border: none;
   font-size: 2rem;
@@ -253,13 +382,16 @@ body {
 }
 
 .prev-btn {
-  left: -50px; /* Verplaats de knop verder naar links */
+  left: -50px;
+  /* Verplaats de knop verder naar links */
 }
 
 .next-btn {
-  right: -50px; /* Verplaats de knop verder naar rechts */
+  right: -50px;
+  /* Verplaats de knop verder naar rechts */
 }
 
 .carousel-btn:hover {
-  background-color: rgba(0, 0, 0, 0.7); /* Donkere achtergrond bij hover */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Donkere achtergrond bij hover */
 }
