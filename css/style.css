@@ -9,67 +9,14 @@ body {
   font-family: Arial, sans-serif;
 }
 
-
-
-
-
-/* Algemene stijl voor de navbar
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  background-color: #ffffff;
-  padding: 10px 20px;
-  z-index: 1000;
-} */
-
-/* Logo opmaak
-.navbar-brand img {
-  width: 150px;
-  height: auto;
-} */
-
-/* Lijst met links in de navbar
-.navbar-links {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-} */
-
-/* Contact link rechts
-.navbar-contact {
-  margin-left: 800px;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-size: 18px;
-  padding: 10px;
-  transition: color 0.3s;
-} */
-
-/* Styling voor elk item in de navbar
-.navbar-links li {
-  margin-left: 20px;
-} */
-
-/* Hover effect voor de links
-.navbar-links a:hover, .navbar-contact:hover {
-  color: #ff5a5f;
-} */
-
-
+/* Navbar styling */
 li {
   list-style: none;
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #000000;
 }
 
 a:hover {
@@ -109,7 +56,7 @@ header {
   display: none;
 }
 
-.action_btn{
+.action_btn {
   background-color: #ffa500;
   color: #fff;
   padding: 0.5rem 1rem;
@@ -145,8 +92,12 @@ header {
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.dropdown_menu.open{
+.dropdown_menu.open {
   height: 240px;
+}
+
+.dropdown_menu a {
+  color: #ffffff;
 }
 
 .dropdown_menu li {
@@ -164,6 +115,7 @@ header {
 
 
 @media(max-width: 992px) {
+
   .navbar .links,
   .navbar .action_btn {
     display: none;
@@ -179,16 +131,11 @@ header {
 }
 
 @media(max-width: 576px) {
-  .dropdown_menu{
+  .dropdown_menu {
     left: 2rem;
     width: unset;
-  }  
+  }
 }
-
-
-
-
-
 
 
 /* Hero section background photos for the home page */
@@ -305,22 +252,101 @@ header {
   background-color: #ff3a3f;
 }
 
-/* Footer sectie */
-.footer_section {
-  background-color: #222;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+/* Footer section */
+.container {
+  max-width: 1170px;
+  margin: auto;
 }
 
-.social-icons a {
-  margin: 0 10px;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
   display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
 }
 
-.social-icons img {
-  width: 40px;
-  height: 40px;
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media(max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
 }
 
 
