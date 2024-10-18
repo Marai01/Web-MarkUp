@@ -12,22 +12,35 @@
 </head>
 
 <body>
-
-
-
-
-
   <!-- Header and Navbar Section -->
   <header>
     <nav class="navbar">
       <section class="logo">
-        <a href="index.html">
-          Peak Performance
-        </a>
+        <a href="index.html">Peak Performance</a>
       </section>
       <ul class="links">
-        <li><a href="exercises.html">Exercises</a></li>
-        <li><a href="food.html">Nutrition</a></li>
+        <li class="dropdown">
+          <a href="exercises.html">Exercises</a>
+          <ul class="dropdown-content">
+            <li><a href="exercises.html#chest">Chest Exercises</a></li>
+            <li><a href="exercises.html#back">Back Exercises</a></li>
+            <li><a href="exercises.html#arms">Arm Exercises</a></li>
+            <li><a href="exercises.html#shoulders">Shoulder Exercises</a></li>
+            <li><a href="exercises.html#abs">Abs Exercises</a></li>
+            <li><a href="exercises.html#legs">Legs Exercises</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="food.html">Nutrition</a>
+          <ul class="dropdown-content">
+            <li><a href="food.html#protein">High Protein</a></li>
+            <li><a href="food.html#calorie">Low Calorie</a></li>
+            <li><a href="food.html#vegan">Vegan</a></li>
+            <li><a href="food.html#gluten">Gluten Free</a></li>
+            <li><a href="food.html#lactose">Lactose Free</a></li>
+            <li><a href="food.html#carbs">Low Carbs</a></li>
+          </ul>
+        </li>
         <li><a href="times.html">Opening Times</a></li>
         <li><a href="event.html">Events and Updates</a></li>
       </ul>
@@ -63,45 +76,35 @@
   </script>
 
 
-  <section class="contact_section layout_padding">
-    <div class="container">
-
-      <div class="heading_container">
-        <h2>
-          Give us your feedback!
-        </h2>
-      </div>
-      <div class="">
-        <div class="">
-          <div class="row">
-            <div class="col-md-9 mx-auto">
-              <div class="contact-form">
-                <form action="">
-                  <div>
-                    <input type="text" placeholder="Full Name ">
-                  </div>
-                  <div>
-                    <input type="text" placeholder="Phone Number">
-                  </div>
-                  <div>
-                    <input type="email" placeholder="Email Address">
-                  </div>
-                  <div>
-                    <input type="text" placeholder="Message" class="input_message">
-                  </div>
-                  <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn_on-hover">
+<section class="contact_section layout_padding">
+  <h2 class="heading_container">
+      Give us your feedback!
+  </h2>
+  <section class="contact-form">
+      <form action="">
+          <ul class="form-fields">
+              <li>
+                  <input type="text" placeholder="Full Name">
+              </li>
+              <li>
+                  <input type="text" placeholder="Phone Number">
+              </li>
+              <li>
+                  <input type="email" placeholder="Email Address">
+              </li>
+              <li>
+                  <input type="text" placeholder="Message" class="input_message">
+              </li>
+              <li class="form-submit">
+                  <button type="submit" class="btn_on-hover">
                       Send
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+                  </button>
+              </li>
+          </ul>
+      </form>
   </section>
+</section>
+
 
 
 
