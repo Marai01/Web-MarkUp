@@ -1,4 +1,3 @@
-/* Algemene opmaak */
 * {
   margin: 0;
   padding: 0;
@@ -57,7 +56,7 @@ header {
 }
 
 .action_btn {
-  background-color: #ffa500;
+  background-color: #fe7000;
   color: #fff;
   padding: 0.5rem 1rem;
   border: none;
@@ -104,7 +103,6 @@ header {
   color: #fff;
 }
 
-/* Show the dropdown content on hover */
 .links li.dropdown:hover .dropdown-content {
   display: block;
 }
@@ -170,7 +168,6 @@ header {
 
 
 
-/* Hero section background photos for the home page */
 .hero_section {
   background: url('../images/home1.png') no-repeat center center/cover;
   height: 100vh;
@@ -181,9 +178,6 @@ header {
   text-align: center;
 }
 
-
-
-/* Hero section background photos for the exercise page */ 
 .hero_section_exercises {
   background: url('../images/bench_background.png') no-repeat center bottom/cover;
   height: 100vh;
@@ -194,14 +188,13 @@ header {
   text-align: center;
 }
 
-/* Hero section background photos for the nutrition page */
 .hero_section_nutrition {
   background: url('../images/food_background.png') no-repeat center center/cover;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: black;
   text-align: center;
 }
 
@@ -214,7 +207,7 @@ header {
   font-size: 20px;
 }
 
-/* Kaarten sectie */
+/* Cards Section */
 .cards_section {
   padding: 50px 20px;
   display: grid;
@@ -255,7 +248,6 @@ header {
   transform: scale(1.05);
 }
 
-/* Tweede achtergrondafbeelding met tekst en knop */
 .cta_section {
   background: url('../images/home2.png') no-repeat center center/cover;
   height: 100vh;
@@ -369,7 +361,7 @@ ul {
   background-color: #ffffff;
 }
 
-/*responsive*/
+
 @media(max-width: 767px) {
   .footer-col {
     width: 50%;
@@ -385,10 +377,6 @@ ul {
 
 
 /* Carousel section */
-
-
-
-
 
 .carousel_section {
   text-align: center;
@@ -417,7 +405,6 @@ ul {
 
 .carousel-item {
   flex: 0 0 20%;
-  /* Toon 5 items tegelijk */
   text-align: center;
   padding: 20px;
 }
@@ -429,7 +416,6 @@ ul {
 
 .carousel-btn {
   background-color: rgba(0, 0, 0, 0.5);
-  /* Zwarte halfdoorzichtige achtergrond */
   color: white;
   border: none;
   font-size: 2rem;
@@ -443,21 +429,16 @@ ul {
 
 .prev-btn {
   left: -50px;
-  /* Verplaats de knop verder naar links */
 }
 
 .next-btn {
   right: -50px;
-  /* Verplaats de knop verder naar rechts */
 }
 
 .carousel-btn:hover {
   background-color: rgba(0, 0, 0, 0.7);
-  /* Donkere achtergrond bij hover */
 }
 
-/* contact styling */
-/* Algemene sectiestyling */
 .contact_section {
   padding: 2rem;
   text-align: center;
@@ -470,7 +451,6 @@ ul {
   margin-bottom: 2rem;
 }
 
-/* Formulier styling */
 .contact-form form {
   max-width: 600px;
   margin: 0 auto;
@@ -485,7 +465,6 @@ ul {
   margin-bottom: 1.5rem;
 }
 
-/* Inputvelden styling */
 input[type="text"],
 input[type="email"] {
   width: 100%;
@@ -500,7 +479,6 @@ input[type="email"] {
   height: 120px;
 }
 
-/* Submit knop styling */
 .form-submit {
   display: flex;
   justify-content: center;
@@ -521,9 +499,81 @@ input[type="email"] {
   background-color: #fe7000;
 }
 
-/* Media queries voor responsieve lay-out */
 @media (max-width: 768px) {
   .contact-form form {
       width: 90%;
   }
 }
+
+
+/* table section */
+
+.upcoming_events {
+  padding: 2rem;
+  text-align: center;
+}
+
+.events-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+.events-table td {
+  padding: 1rem;
+  vertical-align: top;
+  text-align: center;
+}
+
+.event-card {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.event-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #ddd;
+}
+
+.event-card h3 {
+  font-size: 1.25rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.event-card p {
+  margin: 0.5rem 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .events-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .events-table td {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .event-card {
+    width: 90%; 
+    max-width: 350px; 
+  }
+}
+
+
+
+
+
