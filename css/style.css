@@ -25,10 +25,10 @@ a:hover {
 
 header {
   padding: 0 2rem;
-  position: sticky; 
-  top: 0; 
-  z-index: 100; 
-  background-color: white; 
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
 }
 
 .navbar {
@@ -39,7 +39,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
 }
 
 .navbar .logo a {
@@ -186,7 +186,7 @@ header {
 .hero_section_exercises {
   background: url('../images/bench_background.png') no-repeat center bottom/cover;
   height: 100vh;
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
   color: white;
@@ -568,7 +568,7 @@ input[type="email"] {
 
 @media (max-width: 768px) {
   .contact-form form {
-      width: 90%;
+    width: 90%;
   }
 }
 
@@ -626,17 +626,17 @@ input[type="email"] {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .events-table td {
     display: flex;
     justify-content: center;
     width: 100%;
     margin-bottom: 2rem;
   }
-  
+
   .event-card {
-    width: 90%; 
-    max-width: 350px; 
+    width: 90%;
+    max-width: 350px;
   }
 }
 
@@ -661,11 +661,14 @@ table {
   font-size: 1rem;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid #ffffff;
 }
 
-th, td {
+th,
+td {
   padding: 10px;
   text-align: left;
 }
@@ -682,9 +685,3 @@ td {
 tr:nth-child(even) {
   background-color: #ffffff;
 }
-
-
-
-
-
-
