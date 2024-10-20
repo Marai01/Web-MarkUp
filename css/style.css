@@ -24,8 +24,11 @@ a:hover {
 }
 
 header {
-  position: relative;
   padding: 0 2rem;
+  position: sticky; 
+  top: 0; 
+  z-index: 100; 
+  background-color: white; 
 }
 
 .navbar {
@@ -36,6 +39,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .navbar .logo a {
@@ -168,6 +172,7 @@ header {
 
 
 
+/* Hero section */
 .hero_section {
   background: url('../images/home1.png') no-repeat center center/cover;
   height: 100vh;
@@ -275,6 +280,68 @@ header {
 }
 
 .cta_section button:hover {
+  background-color: #ff3a3f;
+}
+
+/* cta section event page */
+.cta_section_events {
+  background: url('../images/bench_background.png') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+
+.cta_section_events h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.cta_section_events button {
+  background-color: #ff5a5f;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta_section_events button:hover {
+  background-color: #ff3a3f;
+}
+
+/* cta section opening times page */
+.cta_section_times {
+  background: url('../images/food_background.png') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+
+.cta_section_times h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.cta_section_times button {
+  background-color: #ff5a5f;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta_section_times button:hover {
   background-color: #ff3a3f;
 }
 
@@ -428,11 +495,11 @@ ul {
 }
 
 .prev-btn {
-  left: -50px;
+  left: -20px;
 }
 
 .next-btn {
-  right: -50px;
+  right: -25px;
 }
 
 .carousel-btn:hover {
@@ -572,6 +639,50 @@ input[type="email"] {
     max-width: 350px; 
   }
 }
+
+.opening-hours {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 2px 10px rgba(70, 28, 28, 0.1);
+}
+
+.opening-hours h2 {
+  text-align: center;
+  color: #fe7000;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+table, th, td {
+  border: 1px solid #ffffff;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #fe7000;
+  color: white;
+}
+
+td {
+  color: #fe7000;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
 
 
 
