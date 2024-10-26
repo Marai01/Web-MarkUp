@@ -86,18 +86,18 @@ header {
   z-index: 1;
 }
 
-.dropdown-content li a {
+.dropdown-content a {
   color: #000000;
   padding: 10px;
   display: block;
 }
 
-.dropdown-content li a:hover {
+.dropdown-content a:hover {
   background-color: #fe7000;
   color: #fff;
 }
 
-.links li.dropdown:hover .dropdown-content {
+.links .dropdown:hover .dropdown-content {
   display: block;
 }
 
@@ -121,14 +121,12 @@ header {
 
 .dropdown_menu a {
   color: #000000;
-}
-
-.dropdown_menu li {
   padding: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 
 .dropdown_menu .action_btn {
   width: 100%;
@@ -405,6 +403,10 @@ ul {
   transition: all 0.5s ease;
 }
 
+.footer-col .social-links p {
+  color: #bbbbbb;
+}
+
 .footer-col .social-links a:hover {
   color: #24262b;
   background-color: #ffffff;
@@ -426,6 +428,12 @@ ul {
 .carousel_section {
   text-align: center;
   margin: 50px auto;
+}
+
+aside {
+  background-color: #fe7000;  
+  padding: 1rem; 
+  margin-top: 1.5rem;
 }
 
 .main-text {
@@ -484,6 +492,7 @@ ul {
   background-color: rgb(0, 0, 0, 0.7);
 }
 
+/* contact styling */
 .contact_section {
   padding: 2rem;
   text-align: center;
@@ -528,6 +537,28 @@ input[type="email"] {
   display: flex;
   justify-content: center;
 }
+
+.contact-form fieldset {
+  border: none;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+.contact-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.contact-form legend {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+
+
 
 .btn_on-hover {
   padding: 0.75rem 2rem;

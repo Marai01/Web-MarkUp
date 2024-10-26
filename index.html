@@ -4,11 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Peak Performance is your ultimate destination for fitness, nutrition tips, and community events designed to help you achieve your fitness goals">
+  <meta name="keywords" content="HTML, CSS, Fitness, Workout, Nutrition, Health, Community">
   <title>Peak Performance</title>
-  <link href="css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" href="images/chest.png" type="image/x-icon">
 </head>
 
 <body>
@@ -52,11 +55,11 @@
     </nav>
 
     <section class="dropdown_menu">
-      <li><a href="exercises.html">Exercises</a></li>
-      <li><a href="food.html">Nutrition</a></li>
-      <li><a href="times.html">Opening Times</a></li>
-      <li><a href="event.html">Events and Updates</a></li>
-      <li><a class="action_btn" href="contact.html">Contact</a></li>
+      <a href="exercises.html">Exercises</a>
+      <a href="food.html">Nutrition</a>
+      <a href="times.html">Opening Times</a>
+      <a href="event.html">Events and Updates</a>
+      <a class="action_btn" href="contact.html">Contact</a>
     </section>
   </header>
 
@@ -69,13 +72,14 @@
     const dropdownMenu = document.querySelector('.dropdown_menu');
 
     toggleBtn.onclick = function () {
-      dropdownMenu.classList.toggle('open');
-      const isOpen = dropDownMenu.classList.contains('open');
+   dropdownMenu.classList.toggle('open');
+   const isOpen = dropdownMenu.classList.contains('open'); // Corrected
 
-      toggleBtnIcon.classList = isOpen
-        ? 'fa-solid fa-xmark'
-        : 'fa-solid fa-bars';
-    }
+   toggleBtnIcon.classList = isOpen
+     ? 'fa-solid fa-xmark'
+     : 'fa-solid fa-bars';
+}
+
   </script>
 
 
@@ -90,26 +94,27 @@
 
   <!-- Card Section -->
   <section class="cards_section">
+    <figure class="card">
+      <img src="images/strenght1.png" alt="Strength Training Card Image" title="Strength Training">
+      <h3>Nutrition Tips</h3>
+      <figcaption>Learn more about our strength programs.</figcaption>
+    </figure>
     <article class="card">
-      <img src="images/strenght1.png" alt="Card 1">
-      <h3>Strength Training</h3>
-      <a href="exercises.html">Learn More</a>
-    </article>
-    <article class="card">
-      <img src="images/recipes.png" alt="Card 2">
+      <img src="images/recipes.png" alt="Nutrition Tips Card Image" title="Nutrition Tips">
       <h3>Nutrition Tips</h3>
       <a href="food.html">Check Your Nutrition</a>
     </article>
-    <article class="card"> 
-      <img src="images/times.jpg" alt="Card 3">
+    <article class="card">
+      <img src="images/times.jpg" alt="Opening Times Card Image" title="Opening Times">
       <h3>Opening Times</h3>
       <a href="times.html">Check The Opening Times</a>
     </article>
     <article class="card">
-      <img src="images/event.png" alt="Card 4">
+      <img src="images/event.png" alt="Event Updates Card Image" title="Event Updates">
       <h3>Event Updates</h3>
       <a href="event.html">Stay Updated</a>
     </article>
+
   </section>
 
 
@@ -160,6 +165,7 @@
             <a href="https://www.linkedin.com/in/marai-de-jong/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://www.youtube.com/@mebracers" target="_blank"><i class="fab fa-youtube"></i></a>
             <a href="https://github.com/Marai01" target="_blank"><i class="fab fa-github"></i></a>
+            <p>&copy; Marai de Jong</p>
           </section>
         </section>
       </section>

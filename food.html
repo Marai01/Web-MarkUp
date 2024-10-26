@@ -4,12 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Peak Performance is your ultimate destination for fitness, nutrition tips, and community events designed to help you achieve your fitness goals">
+  <meta name="keywords" content="HTML, CSS, Fitness, Workout, Nutrition, Health, Community">
   <title>Nutrition</title>
-  <link href="css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" href="images/chest.png" type="image/x-icon">
 </head>
 
 <body>
@@ -53,30 +55,28 @@
     </nav>
 
     <section class="dropdown_menu">
-      <li><a href="exercises.html">Exercises</a></li>
-      <li><a href="food.html">Nutrition</a></li>
-      <li><a href="times.html">Opening Times</a></li>
-      <li><a href="event.html">Events and Updates</a></li>
-      <li><a class="action_btn" href="contact.html">Contact</a></li>
+      <a href="exercises.html">Exercises</a>
+      <a href="food.html">Nutrition</a>
+      <a href="times.html">Opening Times</a>
+      <a href="event.html">Events and Updates</a>
+      <a class="action_btn" href="contact.html">Contact</a>
     </section>
   </header>
-
 
   <script>
     const toggleBtn = document.querySelector('.toggle_btn');
     const toggleBtnIcon = document.querySelector('.toggle_btn i');
     const dropdownMenu = document.querySelector('.dropdown_menu');
-    
+
     toggleBtn.onclick = function () {
       dropdownMenu.classList.toggle('open');
-      const isOpen = dropDownMenu.classList.contains('open');
+      const isOpen = dropdownMenu.classList.contains('open');
 
-      toggleBtnIcon.classList = isOpen
+      toggleBtnIcon.className = isOpen
         ? 'fa-solid fa-xmark'
         : 'fa-solid fa-bars';
     }
   </script>
-
 
   <!-- Hero Section -->
   <section class="hero_section_nutrition">
@@ -89,34 +89,34 @@
   <!-- Card Section -->
   <section class="cards_section">
     <article class="card">
-      <img src="images/protein.png" alt="Card 1" id="protein">
+      <img src="images/protein.png" alt="High Protein Meal" id="protein">
       <h3>High Protein</h3>
       <a href="">Learn More</a>
     </article>
     <article class="card">
-      <img src="images/low_calorie.png" alt="Card 2" id="calorie">
+      <img src="images/low_calorie.png" alt="Low Calorie Meal" id="calorie">
       <h3>Low Calorie</h3>
-      <a href="">Explore</a>
+      <a href="">Learn More</a>
     </article>
     <article class="card">
-      <img src="images/vegan.png" alt="Card 3" id="vegan">
+      <img src="images/vegan.png" alt="Vegan Meal Options" id="vegan">
       <h3>Vegan</h3>
-      <a href="">Discover Recipes</a>
+      <a href="">Learn More</a>
     </article>
     <article class="card">
-      <img src="images/gluten_free.jpg" alt="Card 4" id="gluten">
+      <img src="images/gluten_free.jpg" alt="Gluten-Free Meal" id="gluten">
       <h3>Gluten Free</h3>
-      <a href="">Stay Updated</a>
+      <a href="">Learn More</a>
     </article>
     <article class="card">
-      <img src="images/lactose_free.png" alt="Card 5" id="lactose">
-      <h3>Lactose free</h3>
-      <a href="">Stay Updated</a>
+      <img src="images/lactose_free.png" alt="Lactose-Free Meal" id="lactose">
+      <h3>Lactose Free</h3>
+      <a href="">Learn More</a>
     </article>
     <article class="card">
-      <img src="images/low_carb.png" alt="Card 6" id="carbs">
+      <img src="images/low_carb.png" alt="Low Carb Meal" id="carbs">
       <h3>Low Carbs</h3>
-      <a href="">Stay Updated</a>
+      <a href="">Learn More</a>
     </article>
   </section>
 
@@ -135,10 +135,10 @@
           </ul>
         </section>
         <section class="footer-col">
-          <h4>Get help</h4>
+          <h4>Get Help</h4>
           <ul>
-            <li><a href="exercises.html">Chest Exercises</a></li>
-            <li><a href="food.html">Gluten Free Nutrition</a></li>
+            <li><a href="exercises.html#chest">Chest Exercises</a></li>
+            <li><a href="food.html#gluten">Gluten-Free Nutrition</a></li>
             <li><a href="times.html">Gym Locations</a></li>
             <li><a href="event.html">Cardio Events</a></li>
           </ul>
@@ -154,20 +154,18 @@
           </ul>
         </section>
         <section class="footer-col">
-          <h4>Follow us</h4>
+          <h4>Follow Us</h4>
           <section class="social-links">
             <a href="https://www.instagram.com/mebracers/" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.linkedin.com/in/marai-de-jong/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://www.youtube.com/@mebracers" target="_blank"><i class="fab fa-youtube"></i></a>
             <a href="https://github.com/Marai01" target="_blank"><i class="fab fa-github"></i></a>
+            <p>&copy; Marai de Jong</p>
           </section>
         </section>
       </section>
     </section>
   </footer>
-
-
-
 </body>
 
 </html>

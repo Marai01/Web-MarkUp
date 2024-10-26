@@ -4,11 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Peak Performance is your ultimate destination for fitness, nutrition tips, and community events designed to help you achieve your fitness goals">
+  <meta name="keywords" content="HTML, CSS, Fitness, Workout, Nutrition, Health, Community">
   <title>Gym Locations</title>
-  <link href="css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" href="images/chest.png" type="image/x-icon">
 </head>
 
 <body>
@@ -52,14 +56,13 @@
     </nav>
 
     <section class="dropdown_menu">
-      <li><a href="exercises.html">Exercises</a></li>
-      <li><a href="food.html">Nutrition</a></li>
-      <li><a href="times.html">Opening Times</a></li>
-      <li><a href="event.html">Events and Updates</a></li>
-      <li><a class="action_btn" href="contact.html">Contact</a></li>
+      <a href="exercises.html">Exercises</a>
+      <a href="food.html">Nutrition</a>
+      <a href="times.html">Opening Times</a>
+      <a href="event.html">Events and Updates</a>
+      <a class="action_btn" href="contact.html">Contact</a>
     </section>
   </header>
-
 
   <script>
     const toggleBtn = document.querySelector('.toggle_btn');
@@ -68,15 +71,10 @@
 
     toggleBtn.onclick = function () {
       dropdownMenu.classList.toggle('open');
-      const isOpen = dropDownMenu.classList.contains('open');
-
-      toggleBtnIcon.classList = isOpen
-        ? 'fa-solid fa-xmark'
-        : 'fa-solid fa-bars';
+      const isOpen = dropdownMenu.classList.contains('open');
+      toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
     }
   </script>
-
-
 
   <!-- Main Section with Carousel -->
   <section class="carousel_section">
@@ -90,7 +88,7 @@
           <img src="images/purmerend.jpg" alt="Basic Fit Purmerend">
           <h3>Basic Fit Purmerend</h3>
         </article>
-        <article class="carousel-item"> 
+        <article class="carousel-item">
           <img src="images/amsterdam.jpg" alt="Basic Fit Amsterdam">
           <h3>Basic Fit Amsterdam</h3>
         </article>
@@ -111,7 +109,6 @@
       <button class="carousel-btn next-btn">&gt;</button>
     </section>
   </section>
-
 
   <section class="opening-hours">
     <h2>Opening Times</h2>
@@ -150,8 +147,6 @@
       </tr>
     </table>
   </section>
-  
-
 
   <!-- Call-to-Action Section -->
   <section class="cta_section_times">
@@ -197,24 +192,19 @@
           <h4>Follow us</h4>
           <section class="social-links">
             <a href="https://www.instagram.com/mebracers/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/marai-de-jong/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.youtube.com/@mebracers" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://github.com/Marai01" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/marai-de-jong/" target="_blank"><i class="fab fa-linkedin"></i></a>
           </section>
         </section>
       </section>
     </section>
   </footer>
 
-
-
   <script>
-
     const track = document.querySelector('.carousel-track');
     const items = document.querySelectorAll('.carousel-item');
     const totalItems = items.length;
     let currentIndex = 0;
-
+  
     // Clone first and last few items to create an infinite loop effect
     for (let i = 0; i < 3; i++) {
       const cloneFirst = items[i].cloneNode(true);
@@ -222,14 +212,14 @@
       track.appendChild(cloneFirst);
       track.insertBefore(cloneLast, items[0]);
     }
-
+  
     const totalTrackItems = document.querySelectorAll('.carousel-item').length;
     const itemWidth = 20; // Percentage breedte per item (5 items per keer zichtbaar)
     let isTransitioning = false;
-
+  
     // Start in the middle, at the first "real" item
     track.style.transform = `translateX(-${itemWidth * 3}%)`;
-
+  
     // Function to move the carousel
     function updateCarousel() {
       if (isTransitioning) return;
@@ -237,11 +227,11 @@
       track.style.transition = 'transform 0.5s ease';
       const offset = -currentIndex * itemWidth;
       track.style.transform = `translateX(${offset}%)`;
-
+  
       // When the transition ends, check if we are at a cloned item and jump back
       track.addEventListener('transitionend', () => {
         isTransitioning = false;
-
+  
         if (currentIndex === totalTrackItems - 3) {
           track.style.transition = 'none'; // No animation
           currentIndex = 3; // Jump back to the first real item
@@ -254,22 +244,19 @@
         }
       });
     }
-
+  
     // Event listeners for the buttons
     document.querySelector('.prev-btn').addEventListener('click', () => {
       if (isTransitioning) return;
       currentIndex--;
       updateCarousel();
     });
-
+  
     document.querySelector('.next-btn').addEventListener('click', () => {
       if (isTransitioning) return;
       currentIndex++;
       updateCarousel();
     });
-
   </script>
-
 </body>
-
 </html>

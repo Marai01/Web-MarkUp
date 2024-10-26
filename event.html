@@ -4,11 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Peak Performance is your ultimate destination for fitness, nutrition tips, and community events designed to help you achieve your fitness goals">
+  <meta name="keywords" content="HTML, CSS, Fitness, Workout, Nutrition, Health, Community">
   <title>Events and Updates</title>
-  <link href="css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" href="images/chest.png" type="image/x-icon">
 </head>
 
 <body>
@@ -52,11 +55,11 @@
     </nav>
 
     <section class="dropdown_menu">
-      <li><a href="exercises.html">Exercises</a></li>
-      <li><a href="food.html">Nutrition</a></li>
-      <li><a href="times.html">Opening Times</a></li>
-      <li><a href="event.html">Events and Updates</a></li>
-      <li><a class="action_btn" href="contact.html">Contact</a></li>
+      <a href="exercises.html">Exercises</a>
+      <a href="food.html">Nutrition</a>
+      <a href="times.html">Opening Times</a>
+      <a href="event.html">Events and Updates</a>
+      <a class="action_btn" href="contact.html">Contact</a>
     </section>
   </header>
 
@@ -68,7 +71,7 @@
 
     toggleBtn.onclick = function () {
       dropdownMenu.classList.toggle('open');
-      const isOpen = dropDownMenu.classList.contains('open');
+      const isOpen = dropdownMenu.classList.contains('open'); // Corrected
 
       toggleBtnIcon.classList = isOpen
         ? 'fa-solid fa-xmark'
@@ -81,7 +84,16 @@
     <h1 class="main-text">Stay Active, Stay Connected!</h1>
     <h3>Discover upcoming Fitness events near you. Whether it's a group Workout, Fitness challenge, or wellness
       workshop, there's always something happening at our Gym locations!</h3>
+    <aside>
+      <h2><em>Also Trie:</em></h2>
+      <ul>
+        <li><a href="exercises.html#abs"><strong>Abs Workout</strong></a></li>
+        <li><a href="food.html#vegan"><strong>Vegan Meal</strong></a></li>
+        <li><a href="contact.html"><strong>Give Us Feedback!</strong></a></li>
+      </ul>
+    </aside>
   </section>
+
 
 
 
@@ -159,7 +171,7 @@
     </table>
   </section>
 
-  
+
   <!-- Call-to-Action Section -->
   <section class="cta_section_events">
     <h1>Have You Tried Our Workouts?</h1>
@@ -208,6 +220,7 @@
             <a href="https://www.linkedin.com/in/marai-de-jong/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://www.youtube.com/@mebracers" target="_blank"><i class="fab fa-youtube"></i></a>
             <a href="https://github.com/Marai01" target="_blank"><i class="fab fa-github"></i></a>
+            <p>&copy; Marai de Jong</p>
           </section>
         </section>
       </section>
