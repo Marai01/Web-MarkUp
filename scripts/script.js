@@ -30,28 +30,25 @@ const toggleBtn = document.querySelector('.toggle_btn');
       showCookiePopup();
     };
 
+// carousel
     const track = document.querySelector('.carousel-track');
     const items = Array.from(document.querySelectorAll('.carousel-item'));
     const totalItems = items.length;
-    const itemWidth = 20; // Percentage breedte per item (5 items per keer zichtbaar)
-    let currentIndex = totalItems; // Start op het eerste "echte" item
+    const itemWidth = 20; 
+    let currentIndex = totalItems;
     let isTransitioning = false;
 
-    // Clone first and last items for seamless looping
     items.forEach((item, index) => {
       const cloneFirst = item.cloneNode(true);
       const cloneLast = item.cloneNode(true);
-      track.appendChild(cloneFirst); // Add clones at the end
-      track.insertBefore(cloneLast, track.firstChild); // Add clones at the start
+      track.appendChild(cloneFirst); 
+      track.insertBefore(cloneLast, track.firstChild); 
     });
 
-    // Update de breedte van de track dynamisch
-    track.style.width = `${(totalItems + 6) * itemWidth}%`; // 6 extra items (3 voor en 3 na)
+    track.style.width = `${(totalItems + 6) * itemWidth}%`; 
 
-    // Startpositie om eerste echte item in het midden te zetten
     track.style.transform = `translateX(-${itemWidth * currentIndex}%)`;
 
-    // Functie om de carousel te updaten
     function updateCarousel() {
       if (isTransitioning) return;
       isTransitioning = true;
@@ -59,25 +56,21 @@ const toggleBtn = document.querySelector('.toggle_btn');
       const offset = -currentIndex * itemWidth;
       track.style.transform = `translateX(${offset}%)`;
 
-      // Controleer of we naar een gekloond item gaan en spring indien nodig
       track.addEventListener('transitionend', () => {
         isTransitioning = false;
-        // Spring naar het begin als we aan het einde van de echte items zijn
         if (currentIndex >= totalItems + 3) {
-          track.style.transition = 'none'; // Geen animatie
-          currentIndex = 3; // Ga naar het eerste echte item
+          track.style.transition = 'none';
+          currentIndex = 3;
           track.style.transform = `translateX(-${itemWidth * currentIndex}%)`;
         }
-        // Spring naar het einde als we aan het begin van de echte items zijn
         if (currentIndex <= 2) {
-          track.style.transition = 'none'; // Geen animatie
-          currentIndex = totalItems + 2; // Ga naar het laatste echte item
+          track.style.transition = 'none';
+          currentIndex = totalItems + 2;
           track.style.transform = `translateX(-${itemWidth * currentIndex}%)`;
         }
       }, { once: true });
     }
 
-    // Event listeners voor de knoppen
     document.querySelector('.prev-btn').addEventListener('click', () => {
       if (isTransitioning) return;
       currentIndex--;
