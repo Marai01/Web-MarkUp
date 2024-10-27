@@ -18,7 +18,7 @@
 
 <body>
   <span id="cookie-popup">
-    <p>This website uses cookies to ensure you get the best experience on our website.</p>
+    <p>This website uses cookies to ensure you get the best experience on our website. Jo Edwin dit is gekkewerk!</p>
     <button onclick="acceptCookies()">Accept</button>
   </span>
 
@@ -155,40 +155,7 @@
       </section>
     </section>
   </footer>
-
-  <script>
-    const toggleBtn = document.querySelector('.toggle_btn');
-    const toggleBtnIcon = document.querySelector('.toggle_btn i');
-    const dropdownMenu = document.querySelector('.dropdown_menu');
-
-    toggleBtn.onclick = function () {
-      dropdownMenu.classList.toggle('open');
-      const isOpen = dropdownMenu.classList.contains('open');
-
-      toggleBtnIcon.classList = isOpen
-        ? 'fa-solid fa-xmark'
-        : 'fa-solid fa-bars';
-    }
-
-    function showCookiePopup() {
-      const popup = document.getElementById("cookie-popup");
-      if (!localStorage.getItem("cookiesAccepted")) {
-        popup.classList.add("show");
-        console.log(Cookies)
-      }
-    }
-
-    function acceptCookies() {
-      localStorage.setItem("cookiesAccepted", "true");
-      document.getElementById("cookie-popup").classList.remove("show");
-    }
-
-    window.onload = showCookiePopup;
-    window.onload = function () {
-      localStorage.removeItem("cookiesAccepted");
-      showCookiePopup();
-    };
-  </script>
+  <script src="/scripts/script.js"></script>
 
 </body>
 
