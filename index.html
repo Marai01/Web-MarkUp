@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Peak Performance is your ultimate destination for fitness, nutrition tips, and community events designed to help you achieve your fitness goals">
+  <meta name="author" content="Marai de Jong">
+  <meta name="description"
+    content="Peak Performance is your ultimate destination for fitness, nutrition tips, and community events designed to help you achieve your fitness goals">
   <meta name="keywords" content="HTML, CSS, Fitness, Workout, Nutrition, Health, Community">
   <title>Peak Performance</title>
   <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -15,6 +17,10 @@
 </head>
 
 <body>
+  <span id="cookie-popup">
+    <p>This website uses cookies to ensure you get the best experience on our website.</p>
+    <button onclick="acceptCookies()">Accept</button>
+  </span>
 
   <!-- Header and Navbar Section -->
   <header>
@@ -63,27 +69,6 @@
     </section>
   </header>
 
-
-
-
-  <script>
-    const toggleBtn = document.querySelector('.toggle_btn');
-    const toggleBtnIcon = document.querySelector('.toggle_btn i');
-    const dropdownMenu = document.querySelector('.dropdown_menu');
-
-    toggleBtn.onclick = function () {
-   dropdownMenu.classList.toggle('open');
-   const isOpen = dropdownMenu.classList.contains('open'); // Corrected
-
-   toggleBtnIcon.classList = isOpen
-     ? 'fa-solid fa-xmark'
-     : 'fa-solid fa-bars';
-}
-
-  </script>
-
-
-
   <!-- Hero Section -->
   <section class="hero_section">
     <section>
@@ -94,27 +79,26 @@
 
   <!-- Card Section -->
   <section class="cards_section">
-    <figure class="card">
+    <figure class="card box float-box">
       <img src="images/strenght1.png" alt="Strength Training Card Image" title="Strength Training">
       <h3>Nutrition Tips</h3>
-      <figcaption>Learn more about our strength programs.</figcaption>
+      <figcaption><a>Learn more about our strength programs.</a></figcaption>
     </figure>
-    <article class="card">
+    <article class="card box float-box">
       <img src="images/recipes.png" alt="Nutrition Tips Card Image" title="Nutrition Tips">
       <h3>Nutrition Tips</h3>
       <a href="food.html">Check Your Nutrition</a>
     </article>
-    <article class="card">
+    <article class="card box float-box">
       <img src="images/times.jpg" alt="Opening Times Card Image" title="Opening Times">
       <h3>Opening Times</h3>
       <a href="times.html">Check The Opening Times</a>
     </article>
-    <article class="card">
+    <article class="card box float-box">
       <img src="images/event.png" alt="Event Updates Card Image" title="Event Updates">
       <h3>Event Updates</h3>
       <a href="event.html">Stay Updated</a>
     </article>
-
   </section>
 
 
@@ -171,6 +155,40 @@
       </section>
     </section>
   </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleBtnIcon = document.querySelector('.toggle_btn i');
+    const dropdownMenu = document.querySelector('.dropdown_menu');
+
+    toggleBtn.onclick = function () {
+      dropdownMenu.classList.toggle('open');
+      const isOpen = dropdownMenu.classList.contains('open');
+
+      toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars';
+    }
+
+    function showCookiePopup() {
+      const popup = document.getElementById("cookie-popup");
+      if (!localStorage.getItem("cookiesAccepted")) {
+        popup.classList.add("show");
+        console.log(Cookies)
+      }
+    }
+
+    function acceptCookies() {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-popup").classList.remove("show");
+    }
+
+    window.onload = showCookiePopup;
+    window.onload = function () {
+      localStorage.removeItem("cookiesAccepted");
+      showCookiePopup();
+    };
+  </script>
 
 </body>
 

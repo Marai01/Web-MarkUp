@@ -22,6 +22,7 @@ a:hover {
   color: #fe7000;
 }
 
+/* navbar styling */
 header {
   padding: 0 2rem;
   position: sticky;
@@ -73,7 +74,7 @@ header {
   color: #fff;
 }
 
-.links li {
+.links>li {
   position: relative;
 }
 
@@ -157,6 +158,7 @@ header {
   }
 }
 
+/* hero styling */
 .hero_section {
   background: url("../images/home1.png") center center /cover no-repeat;
   height: 100vh;
@@ -196,6 +198,26 @@ header {
   font-size: 20px;
 }
 
+.hero_section_exercises h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero_section_exercises p {
+  font-size: 20px;
+}
+
+.hero_section_nutrition h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero_section_nutrition p {
+  font-size: 20px;
+  color: white;
+}
+
+/* Card styling */
 .cards_section {
   padding: 50px 20px;
   display: grid;
@@ -209,12 +231,28 @@ header {
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
 }
 
 .card img {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: contain;
   display: block;
+}
+
+/* Responsieve aanpassing voor mobiel */
+@media (max-width: 768px) {
+  .cards_section {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 150px;
+  }
 }
 
 .card h3 {
@@ -232,10 +270,56 @@ header {
   font-weight: bold;
 }
 
+/* waarom moet dit ook? */
+h1 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+a:visited {
+  color: rgb(27, 27, 27);
+}
+
+.box {
+  border-color: rgb(240, 240, 240);
+  border-style: dashed;
+  border-width: 2px;
+}
+
+.float-box {
+  float: left;
+}
+
+p::first-letter {
+  font-size: 1em;
+}
+
+p {
+  line-height: 1.5;
+  text-indent: 20px;
+  word-spacing: 5px;
+}
+
+.hero_section h1,
+.hero_section_exercises h1,
+.hero_section_nutrition h1,
+.cta_section h1,
+.cta_section_events h1,
+.cta_section_times h1,
+.opening-hours h2 {
+  color: rgb(255, 255, 255);
+  /* Voorbeeldkleur */
+}
+
 .card:hover {
   transform: scale(1.05);
 }
 
+/* cta styling */
 .cta_section {
   background: url("../images/home2.png") center center /cover no-repeat;
   height: 100vh;
@@ -340,6 +424,7 @@ ul {
   list-style: none;
 }
 
+/* footer styling */
 .footer {
   background-color: #24262b;
   padding: 70px 0;
@@ -425,20 +510,29 @@ ul {
   }
 }
 
-.carousel_section {
-  text-align: center;
-  margin: 50px auto;
+/* aside styling */
+.aside a:hover {
+  color: #7ADEC9;
 }
 
 aside {
-  background-color: #fe7000;  
-  padding: 1rem; 
+  background-color: #fe7000;
+  padding: 1rem;
   margin-top: 1.5rem;
+  text-align: center;
 }
 
 .main-text {
   font-size: 2rem;
   margin-bottom: 20px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+/* carousel styling */
+.carousel_section {
+  text-align: center;
+  margin: 50px auto;
 }
 
 .carousel-container {
@@ -454,21 +548,26 @@ aside {
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .carousel-item {
   flex: 0 0 20%;
   text-align: center;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .carousel-item img {
   width: 100%;
+  height: 200px;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .carousel-btn {
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   font-size: 2rem;
@@ -478,18 +577,19 @@ aside {
   transform: translateY(-50%);
   padding: 10px 20px;
   border-radius: 50%;
+  z-index: 10;
 }
 
 .prev-btn {
-  left: -20px;
+  left: 10px;
 }
 
 .next-btn {
-  right: -25px;
+  right: 10px;
 }
 
 .carousel-btn:hover {
-  background-color: rgb(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* contact styling */
@@ -557,9 +657,6 @@ input[type="email"] {
   font-weight: bold;
 }
 
-
-
-
 .btn_on-hover {
   padding: 0.75rem 2rem;
   background-color: #ffa500;
@@ -581,6 +678,7 @@ input[type="email"] {
   }
 }
 
+/* event styling */
 .upcoming_events {
   padding: 2rem;
   text-align: center;
@@ -646,6 +744,7 @@ input[type="email"] {
   }
 }
 
+/* times styling */
 .opening-hours {
   background-color: #f9f9f9;
   padding: 20px;
@@ -694,4 +793,50 @@ td {
 
 tr:nth-child(even) {
   background-color: #ffffff;
+}
+
+/* cookie styling */
+#cookie-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2f2f2f;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 90%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9999;
+}
+
+#cookie-popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#cookie-popup p {
+  margin: 0;
+  text-align: center;
+  font-size: 0.875em;
+}
+
+#cookie-popup button {
+  background-color: #0F5AC8;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 0.3125em;
+  cursor: pointer;
+  font-size: 0.875em;
+}
+
+#cookie-popup button:hover {
+  background-color: #1874CD;
 }

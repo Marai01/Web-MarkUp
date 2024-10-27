@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Peak Performance is your ultimate destination for fitness, nutrition tips, and community events designed to help you achieve your fitness goals">
+  <meta name="author" content="Marai de Jong">
+  <meta name="description"
+    content="Peak Performance is your ultimate destination for fitness, nutrition tips, and community events designed to help you achieve your fitness goals">
   <meta name="keywords" content="HTML, CSS, Fitness, Workout, Nutrition, Health, Community">
   <title>Contact</title>
   <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -62,60 +64,36 @@
     </section>
   </header>
 
-
-  <script>
-    const toggleBtn = document.querySelector('.toggle_btn');
-    const toggleBtnIcon = document.querySelector('.toggle_btn i');
-    const dropdownMenu = document.querySelector('.dropdown_menu');
-
-    toggleBtn.onclick = function () {
-      dropdownMenu.classList.toggle('open');
-      const isOpen = dropdownMenu.classList.contains('open'); // Corrected
-
-      toggleBtnIcon.classList = isOpen
-        ? 'fa-solid fa-xmark'
-        : 'fa-solid fa-bars';
-    }
-
-  </script>
-
-
-<section class="contact_section layout_padding">
-  <section class="contact-form">
+  <section class="contact_section layout_padding">
+    <section class="contact-form">
       <form action="#">
-          <fieldset>
-              <legend class="heading_container">Contact Information</legend>
-              <ul class="form-fields">
-                  <li>
-                      <label for="full-name">Full Name:</label>
-                      <input type="text" id="full-name" placeholder="Full Name">
-                  </li>
-                  <li>
-                      <label for="phone-number">Phone Number:</label>
-                      <input type="text" id="phone-number" placeholder="Phone Number">
-                  </li>
-                  <li>
-                      <label for="email">Email Address:</label>
-                      <input type="email" id="email" placeholder="Email Address">
-                  </li>
-                  <li>
-                      <label for="message">Message:</label>
-                      <input type="text" id="message" placeholder="Message" class="input_message">
-                  </li>
-                  <li class="form-submit">
-                      <button type="submit" class="btn_on-hover">Send</button>
-                  </li>
-              </ul>
-          </fieldset>
+        <fieldset>
+          <legend class="heading_container">Contact Information</legend>
+          <ul class="form-fields">
+            <li>
+              <label for="full-name">Full Name:</label>
+              <input type="text" id="full-name" placeholder="Full Name">
+            </li>
+            <li>
+              <label for="phone-number">Phone Number:</label>
+              <input type="text" id="phone-number" placeholder="Phone Number">
+            </li>
+            <li>
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" placeholder="Email Address">
+            </li>
+            <li>
+              <label for="message">Message:</label>
+              <input type="text" id="message" placeholder="Message" class="input_message">
+            </li>
+            <li class="form-submit">
+              <button type="submit" class="btn_on-hover">Send</button>
+            </li>
+          </ul>
+        </fieldset>
       </form>
+    </section>
   </section>
-</section>
-
-
-
-
-
-
 
   <!-- Footer Section -->
   <footer class="footer">
@@ -164,7 +142,20 @@
     </section>
   </footer>
 
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleBtnIcon = document.querySelector('.toggle_btn i');
+    const dropdownMenu = document.querySelector('.dropdown_menu');
 
+    toggleBtn.onclick = function () {
+      dropdownMenu.classList.toggle('open');
+      const isOpen = dropdownMenu.classList.contains('open');
+
+      toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars';
+    }
+  </script>
 
 </body>
 

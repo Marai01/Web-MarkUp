@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Peak Performance is your ultimate destination for fitness, nutrition tips, and community events designed to help you achieve your fitness goals">
+  <meta name="author" content="Marai de Jong">
+  <meta name="description"
+    content="Peak Performance is your ultimate destination for fitness, nutrition tips, and community events designed to help you achieve your fitness goals">
   <meta name="keywords" content="HTML, CSS, Fitness, Workout, Nutrition, Health, Community">
   <title>Events and Updates</title>
   <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -63,24 +65,7 @@
     </section>
   </header>
 
-
-  <script>
-    const toggleBtn = document.querySelector('.toggle_btn');
-    const toggleBtnIcon = document.querySelector('.toggle_btn i');
-    const dropdownMenu = document.querySelector('.dropdown_menu');
-
-    toggleBtn.onclick = function () {
-      dropdownMenu.classList.toggle('open');
-      const isOpen = dropdownMenu.classList.contains('open'); // Corrected
-
-      toggleBtnIcon.classList = isOpen
-        ? 'fa-solid fa-xmark'
-        : 'fa-solid fa-bars';
-    }
-  </script>
-
-
-  <section class="carousel_section">
+  <section class="aside">
     <h1 class="main-text">Stay Active, Stay Connected!</h1>
     <h3>Discover upcoming Fitness events near you. Whether it's a group Workout, Fitness challenge, or wellness
       workshop, there's always something happening at our Gym locations!</h3>
@@ -93,9 +78,6 @@
       </ul>
     </aside>
   </section>
-
-
-
 
   <section class="upcoming_events">
     <h1>Upcoming Events:</h1>
@@ -171,14 +153,12 @@
     </table>
   </section>
 
-
   <!-- Call-to-Action Section -->
   <section class="cta_section_events">
     <h1>Have You Tried Our Workouts?</h1>
     <button onclick="window.location.href='exercises.html'">Go to Page</button>
     <h2>Explore exercises for every muscle group to maximize your results!</h2>
   </section>
-
 
   <!-- Footer Section -->
   <footer class="footer">
@@ -227,6 +207,20 @@
     </section>
   </footer>
 
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleBtnIcon = document.querySelector('.toggle_btn i');
+    const dropdownMenu = document.querySelector('.dropdown_menu');
+
+    toggleBtn.onclick = function () {
+      dropdownMenu.classList.toggle('open');
+      const isOpen = dropdownMenu.classList.contains('open');
+
+      toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars';
+    }
+  </script>
 
 </body>
 
